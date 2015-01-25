@@ -68,6 +68,7 @@ static const int GRID_COLUMNS = 10;
 
 - (void) evolveStep
 {
+    NSLog(@"evolveStep");
     //update each Creature's neighbor count
     [self countNeighbors];
     
@@ -80,6 +81,7 @@ static const int GRID_COLUMNS = 10;
 
 -(void) countNeighbors
 {
+    NSLog(@"countNeighbors");
     // iterate through the rows
     // note that NSArray has a method 'count' that will return the number of elements in the array
     for (int i = 0; i < [_gridArray count]; i++)
@@ -132,6 +134,7 @@ static const int GRID_COLUMNS = 10;
 
 - (void) updateCreatures
 {
+    NSLog(@"updateCreatures");
     for (int i = 0; i < [_gridArray count]; i++)
     {
         // iterate through all the columns for a given row
@@ -145,6 +148,7 @@ static const int GRID_COLUMNS = 10;
             } else if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors >= 4){
                 currentCreature.isAlive = FALSE;
             }
+            
             NSLog(@"Creature %d %d is %s", i, j, currentCreature.isAlive? "alive":"dead");
         }
     }
