@@ -146,7 +146,7 @@ static const int GRID_COLUMNS = 10;
                 currentCreature.livingNeighbors >= 4) {
                 currentCreature.isAlive = FALSE;
             }
-            printf("Creature %d %d is %s", i, j, currentCreature.isAlive? "alive":"dead");
+            NSLog(@"Creature %d %d is %s", i, j, currentCreature.isAlive? "alive":"dead");
         }
     }
     
