@@ -16,6 +16,5 @@
 -(void)evolveStep;
 -(void)countNeighbors;
 -(void)updateCreatures;
-- (BOOL)isIndexValidForX;
 
 @end
