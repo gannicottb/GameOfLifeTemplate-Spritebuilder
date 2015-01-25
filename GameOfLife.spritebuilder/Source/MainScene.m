@@ -22,6 +22,7 @@
 
     if (self) {
         _timer = [[CCTimer alloc] init];
+        _grid = [Grid new];
     }
     
     return self;
