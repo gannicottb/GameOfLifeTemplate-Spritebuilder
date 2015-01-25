@@ -142,7 +142,7 @@ static const int GRID_COLUMNS = 10;
             if (currentCreature.livingNeighbors == 3) {
                 currentCreature.isAlive = TRUE;
                 
-            } else  {
+            } else if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors >= 4){
                 currentCreature.isAlive = FALSE;
             }
             NSLog(@"Creature %d %d is %s", i, j, currentCreature.isAlive? "alive":"dead");
@@ -161,6 +161,7 @@ static const int GRID_COLUMNS = 10;
     
     //invert it's state - kill it if it's alive, bring it to life if it's dead.
     creature.isAlive = !creature.isAlive;
+    NSLog(@"Clicked creature");
 }
 
 -(Creature*)creatureForTouchPosition:(CGPoint)touchPosition
