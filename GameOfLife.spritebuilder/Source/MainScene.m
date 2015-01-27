@@ -43,6 +43,8 @@
 - (void)step
 {
     NSLog(@"main scene step");
+    //
+    //By the time it calls this, _grid's _gridArray is nil (and cellWidth and cellHeight are 0 as well!)
     [_grid evolveStep];
     _generationLabel.string = [NSString stringWithFormat:@"%d", _grid.generation];
     _populationLabel.string = [NSString stringWithFormat:@"%d", _grid.totalAlive];
