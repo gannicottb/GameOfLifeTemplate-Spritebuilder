@@ -145,13 +145,14 @@ static const int GRID_COLUMNS = 10;
             
             if (currentCreature.livingNeighbors == 3) {
                 currentCreature.isAlive=TRUE;
-                numAlive++;
+                
                 
             } else if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors >= 4){
                 currentCreature.isAlive = FALSE;
             }
             
             NSLog(@"Creature %d %d is %s", i, j, currentCreature.isAlive? "alive":"dead");
+            numAlive+=currentCreature.isAlive;
         }
     }
     _totalAlive = numAlive;
